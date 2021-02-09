@@ -106,7 +106,7 @@ public class TriviaSteps {
     public void digitoNumeroQuestoes(String numeroDeQuestoes){
         this.data.setNumeroDeQuestoes(Integer.parseInt(numeroDeQuestoes));
         this.triviaApiPage.getNumberOfQuestionTxt().clear();
-        this.triviaApiPage.getNumberOfQuestionTxt().sendKeys(numeroDeQuestoes.toString());
+        this.triviaApiPage.getNumberOfQuestionTxt().sendKeys(numeroDeQuestoes);
     }
 
     @E("seleciono a categoria {string}")
@@ -152,24 +152,4 @@ public class TriviaSteps {
                 .body("results", hasSize(this.data.getNumeroDeQuestoes()));
 
     }
-
-
-    public static void main(String[] args) {
-//        given().log().all()
-//                .when().get("https://opentdb.com/api.php?amount=10")
-//                .then().statusCode(200);
-//        when().get()
-//                .then().log().body().statusCode(200);
-        Map<String,String> opa = new HashMap<>();
-        opa.put("category","Sports");
-        get("https://opentdb.com/api.php?amount=10&category=21&difficulty=easy")
-                .then().statusCode(200).assertThat()
-                .body("results", hasItem(allOf(hasEntry("category","Sports"))))
-                .body("results", hasItem(allOf(hasEntry("difficulty","easy"))))
-                .body("results", hasSize(10));
-
-    }
-
-
-
 }
