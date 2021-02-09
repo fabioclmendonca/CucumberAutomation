@@ -37,7 +37,7 @@ Então Visualizo "25" itens encontrados na lista de questões
 E visualizo os botões de passagem de pagina
 
 --- 
-#### Cenário @ID-0003 to @ID-0007  - Gerar requisição de serviço e conferir dados de entrada
+#### Cenário @ID-0003 to @ID-0007  - Gerar requisição de serviço e conferir se dados de saida conferem com filtro de entrada
 Dado que navego para a página de API do banco de questões
 E digito "<numero_de_questoes>" no campo de número de questões
 E seleciono a categoria "<categoria>"
