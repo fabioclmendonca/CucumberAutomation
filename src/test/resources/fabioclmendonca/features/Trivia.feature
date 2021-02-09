@@ -1,6 +1,7 @@
 # language: pt
 Funcionalidade: cenário negativo para busca invalida
   cenário positivo para busca por categoria com validação de limite de itens por paginas e disponibilização de paginação
+  cenários positivos para geração de link de serviço e validação de dados retornados no serviço
 
   Contexto: Pagina do banco de questões
     Dado Eu navego para "https://opentdb.com/"
@@ -11,7 +12,7 @@ Funcionalidade: cenário negativo para busca invalida
     Quando clico no botão de buscar
     Então visualizo uma mensagem de erro com o texto "No questions found."
 
-  Cenário: Busca por categoria valida com máximo de 25 itens e paginação ativa
+  Cenário: Busca por categoria valida com máximo de 25 itens e paginação ativa:
     Dado que navego para a página de busca do banco de questões
     E digito "Science: Computers" no campo de busca
     E altero o filtro do tipo de busca para "Category"
